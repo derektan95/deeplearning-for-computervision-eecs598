@@ -1,4 +1,4 @@
-# Deep Learning for Computer Vision - EECS598 (Umich)
+# Deep Learning for Computer Vision - EECS598
 
 **Course Website:** https://web.eecs.umich.edu/~justincj/teaching/eecs498
 
