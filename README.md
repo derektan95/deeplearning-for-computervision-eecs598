@@ -187,7 +187,7 @@
 
 
 ## [Assignment 5](https://github.com/derektan95/eecs598-deeplearning-for-computervision/tree/master/A5): Object Detection
-### Single Stage Detector - YOLO v1 (~13.1% Mean Average Precision - Validation Set)
+### Single Stage Detector - YOLO v1 (~13.1% mAP on Validation Set)
 - **Purpose:** Demarcate objects with Bounding Boxes given a feature map of input image from ImageNET CNN backbone 
 - **Multi-Loss Function:** (Confidence, Class, BBox Offsets)
 - **Pretrained Image Feature Extraction Architecture** = [MobileNet v2](https://pytorch.org/hub/pytorch_vision_mobilenet_v2/)
@@ -197,7 +197,7 @@
 - **Optimization Parameters:** Conv Weights & Biases
 - **Weight Initializer:** Kaiming / Xavier Initializer
 - **Hyperparameters:** Learning Rate=**5e-2**, Learning Rate Decay=**1.0**, Batch Size=**10**
-- **Regularization:** N/A
+- **Regularization:** Dropout
 - **Validation:** Regular Validation
 - **Training Duration:** **12.5k** iterations (50 epochs * train_size/batch_size)
 - **Data Set**: **2.5k** training, **2.5k** validation images from [PASAL VOC 2007 dataset](http://host.robots.ox.ac.uk/pascal/VOC/) **(Reshaped to 224x224px)**
@@ -208,7 +208,7 @@
 </p>
 
 
-### Two Stage Detector - Faster RCNN (~21.7% Mean Average Precision - Validation Set)
+### Two Stage Detector - Faster RCNN (~21.7% mAP on Validation Set)
 - **Purpose:** Demarcate objects with Bounding Boxes given a feature map of input image from ImageNET CNN backbone 
 - **Stage 1:** Similar to YOLO, but detecting (Confidence, BBox Offsets)
 - **Stage 2:** Separately detecting Class per Bounding Box
@@ -221,7 +221,7 @@
 - **Optimization Parameters:** Linear/Conv Weights & Biases
 - **Weight Initializer:** Kaiming / Xavier Initializer
 - **Hyperparameters:** Learning Rate=**5e-3**, Learning Rate Decay=**1.0**, Batch Size=**10**
-- **Regularization:** N/A
+- **Regularization:** Dropout
 - **Validation:** Regular Validation
 - **Training Duration:** **25.0k** iterations (100 epochs * train_size/batch_size)
 - **Data Set**: **2.5k** training, **2.5k** validation images from [PASAL VOC 2007 dataset](http://host.robots.ox.ac.uk/pascal/VOC/) **(Reshaped to 224x224px)**
